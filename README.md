@@ -1,6 +1,12 @@
 This is an app called Book Finder.The main functionality of this app is to search for books. 
 ![](bookfinder-images/bookfinder1.PNG)
 ![](bookfinder-images/bookfinder2.PNG)
+![](bookfinder-images/bookfinder3.PNG)
+![](bookfinder-images/bookfinder4.PNG)
+![](bookfinder-images/bookfinder5.PNG)
+![](bookfinder-images/bookfinder6.PNG)
+![](bookfinder-images/bookfinder7.PNG)
+![](bookfinder-images/bookfinder8.PNG)
 
 
 
