@@ -2,6 +2,9 @@ import {useState} from 'react';
 import './App.css';
 // required imports from reactstrap
 import { InputGroup, Input, InputGroupText, Button, FormGroup, Label} from 'reactstrap';
+// installed and import toastify for custom notifications
+ import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -9,6 +12,14 @@ function App() {
   const [maxResults, setMaxResults]= useState(10);
   const [startIndex, setStartIndex]= useState(1);
   const [query, setQuery]= useState('');
+  // setting state for loading
+  const [loading, setLoading] = useState(false);
+  // search button functionality
+  const handleSubmit = () => {
+    setLoading(true);
+    if(maxResults > 10 || maxResults < 1)
+    toast.error("Max results must be between 1 and 10")
+  }
   // to dispaly main background image and input fields
   const mainTheme = () => {
     return (
@@ -28,7 +39,8 @@ function App() {
             <Input placeholder='Search For Books' value={query} onChange ={e => setQuery(e.target.value)}/>
 
             <InputGroupText>
-              <Button color='secondary'>
+            {/* added functionality to search button */}
+              <Button color='secondary' onClick={handleSubmit}>
                 <i className='fas fa-search'></i>
               </Button>
             </InputGroupText>
@@ -44,6 +56,7 @@ function App() {
                 value={maxResults} onChange ={e => setMaxResults(e.target.value)}
               />
             </FormGroup>
+            {/* start index  */}
             <FormGroup className='ml-5'>
               <Label for='startIndex'>Start Index</Label>
               <input
@@ -62,6 +75,8 @@ function App() {
     <div>
       {/* main background image */}
      {mainTheme()}
+     {/* adding toast container for notifications */}
+     <ToastContainer />
     </div>
   );
 }
