@@ -1,11 +1,22 @@
-This is an app called Book Finder.The main functionality of this app is to search for books. 
+This is an app called Book Finder.The main functionality of this app is to search for books.
+## Framework used: React
+## Libraries used: Axios, Reactstrap, Toastify
+
 ![](images/bookfinder1.PNG)
+## customized notification for missing input - Missing query
 ![](images/bookfinder2.PNG)
+## Max results must be between 1 and 10
 ![](images/bookfinder3.PNG)
+## Total number of search results - Total items
+
 ![](images/bookfinder4.PNG)
+## Start index shouldn't exceed total items
 ![](images/bookfinder5.PNG)
+## Search results in grid and missing image displays "alt" text
 ![](images/bookfinder6.PNG)
+## Result cards contain "More info" buttons
 ![](images/bookfinder7.PNG)
+## Result card expands giving description and, preview and info links
 ![](images/bookfinder8.PNG)
 
 
