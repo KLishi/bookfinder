@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+<img src="./bookfinder-images/bookfinder1.png" alt="Connexion Mockup" width="60%"># Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
