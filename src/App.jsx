@@ -3,8 +3,10 @@ import './App.css';
 // required imports from reactstrap
 import { InputGroup, Input, InputGroupText, Button, FormGroup, Label} from 'reactstrap';
 // installed and import toastify for custom notifications
- import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import axios
+import axios from 'axios';
 
 
 function App() {
@@ -14,12 +16,33 @@ function App() {
   const [query, setQuery]= useState('');
   // setting state for loading
   const [loading, setLoading] = useState(false);
-  // search button functionality
+  // state for search result cards
+  const [cards,setCards] = useState([]);
+  // search button functionality 
+  //  google api link customized with axios -get,then,catch[https://www.googleapis.com/books/v1/volumes?q=search+terms]
   const handleSubmit = () => {
     setLoading(true);
-    if(maxResults > 10 || maxResults < 1)
+    if(maxResults > 10 || maxResults < 1){
     toast.error("Max results must be between 1 and 10")
+  } else {
+    axios
+    .get(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=${maxResults}&startIndex=${startIndex}`)
+    .then(res =>{
+      if(startIndex >= res.data.totalItems || startIndex < 1){
+        toast.error(` Start index must be between 1 and ${res.data.totalItems}`);
+      }else {
+        if(res.data.items.length > 0){
+          setCards(res.data.items);
+          setLoading(false);
+         
+        }
+      }
+    } )
+    .catch(err => {setLoading(true);
+      toast.error(`${err.response.data.error.message}`)})
   }
+}
+    
   // to dispaly main background image and input fields
   const mainTheme = () => {
     return (
