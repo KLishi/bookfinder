@@ -25,3 +25,11 @@ body{
   position: absolute;
   z-index: 1;
 }
+.crad-title {
+  overflow: hidden;
+  color:rgba(0,0,0,0.75);
+  font-weight: 450;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
