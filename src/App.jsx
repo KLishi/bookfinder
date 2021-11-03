@@ -28,10 +28,11 @@ function App() {
               </Button>
             </InputGroupText>
           </InputGroup>
+          {/* max results */}
           <div className='d-flex text-white justify-content-center'>
             <FormGroup className='ml-5'>
-              <Label for='maxResults'>Max Results</Label>
-              <input type='number' id='maxResults' placeholder='Max Results' />
+              <Label for='maxResults'></Label>
+              <input type='number' id='maxResults' placeholder='Max Results upto 10' />
             </FormGroup>
 
           </div>
