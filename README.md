@@ -18,7 +18,7 @@ This is an app called Book Finder.The main functionality of this app is to searc
 ![](images/bookfinder6.PNG)
 ## Result cards contain "More info" buttons
 ![](images/bookfinder7.PNG)
-## Result card expands giving description and, preview and info links
+## Result card expands giving info about authors, language, publisher, pagecount, description and, preview and info links
 ![](images/bookfinder8.PNG)
 
 
