@@ -20,6 +20,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   // state for search result cards
   const [cards,setCards] = useState([]);
+  // for total search results
+  const [totalItems, setTotalItems]=useState(0);
   // search button functionality 
   //  google api link customized with axios -get,then,catch[https://www.googleapis.com/books/v1/volumes?q=search+terms]
   const handleSubmit = () => {
@@ -36,6 +38,7 @@ function App() {
         if(res.data.items.length > 0){
           setCards(res.data.items);
           setLoading(false);
+          setTotalItems(res.data.totalItems);
          
         }
       }
@@ -93,6 +96,10 @@ function App() {
             </FormGroup>
           </div>
         </div>
+        <div>
+          <h1 className='display-2 text-center text-white mb-3'
+          style={{ zIndex: 2 }}>Total items:{totalItems} </h1>
+        </div>
       </div>
     );
   };
@@ -113,7 +120,6 @@ function App() {
         }
 
         return (
-         
           <div className='col-lg-4 mb-3' key={item.id}>
             
             <BookCard
