@@ -1,6 +1,8 @@
 This is an app called Book Finder.The main functionality of this app is to search for books.
+## API used: Google Books API
 ## Framework used: React
 ## Libraries used: Axios, Reactstrap, Toastify
+ 
 
 ![](images/bookfinder1.PNG)
 ## customized notification for missing input - Missing query
