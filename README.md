@@ -1,4 +1,8 @@
-<img src="./bookfinder-images/bookfinder1.png" alt="Connexion Mockup" width="60%"># Getting Started with Create React App
+![](bookfinder-images/bookfinder1.PNG)
+![](images/taskmanager-1.PNG)
+![](images/taskmanager2.PNG)
+![](images/taskmanager-4.PNG)
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
